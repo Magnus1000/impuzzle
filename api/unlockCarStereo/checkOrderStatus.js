@@ -1,7 +1,10 @@
 const cors = require('cors'); // Importing the CORS package
 
 // Initialize CORS handler
-const corsHandler = cors();
+const corsOptions = {
+  origin: 'https://www.unlockcarstereo.com'
+};
+const corsHandler = cors(corsOptions);
 
 // Vercel Serverless Function (example: /api/checkOrderStatus.js)
 module.exports = async function(req, res) {
