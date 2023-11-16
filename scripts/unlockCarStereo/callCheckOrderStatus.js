@@ -17,7 +17,7 @@ window.onload = function() {
         var orderStatusDiv = document.getElementById("order_status_text");
         orderStatusDiv.innerText = "Fetching order status...";
 
-        fetch("https://your-vercel-function-url.com/checkOrderStatus?orderId=" + orderId)
+        fetch("https://impuzzle-magnus1000team.vercel.app/api/unlockCarStereo/checkOrderStatus?orderId=" + orderId)
             .then(response => response.json())
             .then(data => {
                 orderStatusDiv.innerHTML = data.orderStatusText || "No records found for the provided order ID.";
